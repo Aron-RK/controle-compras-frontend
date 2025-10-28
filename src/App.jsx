@@ -9,12 +9,10 @@ export default function App() {
         Controle de Compras
       </h1>
 
-      {/* Dashboard cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
         <Dashboard />
       </div>
 
-      {/* Form + Table */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-1">
           <PurchaseForm />
