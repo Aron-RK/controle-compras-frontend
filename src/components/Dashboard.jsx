@@ -13,20 +13,19 @@ export default function Dashboard({ updatedKey }) {
     }
   };
 
-  // atualiza sempre que updatedKey mudar
   useEffect(() => {
     fetchTotals();
   }, [updatedKey]);
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div className="bg-white p-4 rounded-xl shadow-lg text-center">
-        <p className="text-gray-500 font-semibold">Total Geral</p>
+      <div className="bg-red-500 text-white p-4 rounded-xl shadow-lg text-center">
+        <p className="font-semibold">Total Geral</p>
         <p className="text-2xl font-bold">R$ {totals.total.toFixed(2)}</p>
       </div>
       {Object.entries(totals.by_buyer).map(([buyer, amount]) => (
-        <div key={buyer} className="bg-white p-4 rounded-xl shadow-lg text-center">
-          <p className="text-gray-500 font-semibold">{buyer}</p>
+        <div key={buyer} className="bg-yellow-400 text-red-700 p-4 rounded-xl shadow-lg text-center">
+          <p className="font-semibold">{buyer}</p>
           <p className="text-xl font-bold">R$ {amount.toFixed(2)}</p>
         </div>
       ))}
