@@ -22,7 +22,7 @@ export default function PurchaseTable({ onUpdated }) {
     try {
       await API.delete(`/purchases/${id}`);
       fetchPurchases();
-      onUpdated?.();
+      onUpdated?.(); // Atualiza o Dashboard
     } catch (err) {
       console.error("Erro ao deletar compra:", err);
       alert("Não foi possível deletar a compra.");
@@ -50,11 +50,10 @@ export default function PurchaseTable({ onUpdated }) {
               <td className="px-4 py-2 text-center">
                 <button
                   onClick={() => handleDelete(p.id)}
-                  className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md mr-2 transition-colors"
+                  className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded-md text-sm transition-colors"
                 >
                   Deletar
                 </button>
-                {/* Editar pode ser adicionado aqui futuramente */}
               </td>
             </tr>
           ))}
