@@ -8,9 +8,14 @@ export default function PurchaseForm({ onAdded }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await API.post("/purchases", { buyer, amount: parseFloat(amount), date });
-    setBuyer(""); setAmount(""); setDate("");
-    onAdded?.();
+    try {
+      await API.post("/purchases", { buyer, amount: parseFloat(amount), date });
+      setBuyer(""); setAmount(""); setDate("");
+      onAdded?.();
+    } catch (err) {
+      console.error("Erro ao adicionar compra:", err);
+      alert("Não foi possível adicionar a compra.");
+    }
   };
 
   return (
