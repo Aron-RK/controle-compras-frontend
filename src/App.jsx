@@ -9,8 +9,8 @@ export default function App() {
   const handleUpdate = () => setUpdatedKey(prev => prev + 1);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 p-4">
-      <h1 className="text-3xl md:text-4xl font-extrabold mb-6 text-center text-gray-800">
+    <div className="min-h-screen bg-gradient-to-b from-yellow-100 to-red-100 p-4">
+      <h1 className="text-3xl md:text-4xl font-extrabold mb-6 text-center text-red-700">
         Controle de Compras
       </h1>
 
