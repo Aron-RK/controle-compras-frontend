@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { API } from "../api";
 
-export default function Dashboard() {
+export default function Dashboard({ updatedKey }) {
   const [totals, setTotals] = useState({ by_buyer: {}, total: 0 });
 
   const fetchTotals = async () => {
@@ -13,9 +13,10 @@ export default function Dashboard() {
     }
   };
 
+  // atualiza sempre que updatedKey mudar
   useEffect(() => {
     fetchTotals();
-  }, []);
+  }, [updatedKey]);
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
