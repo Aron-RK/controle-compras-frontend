@@ -5,8 +5,12 @@ export default function PurchaseTable() {
   const [purchases, setPurchases] = useState([]);
 
   const fetchPurchases = async () => {
-    const res = await API.get("/purchases");
-    setPurchases(res.data);
+    try {
+      const res = await API.get("/purchases");
+      setPurchases(res.data);
+    } catch (err) {
+      console.error("Erro ao buscar compras:", err);
+    }
   };
 
   useEffect(() => {
