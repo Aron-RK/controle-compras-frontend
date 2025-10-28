@@ -4,9 +4,9 @@ import PurchaseTable from "./components/PurchaseTable";
 import Dashboard from "./components/Dashboard";
 
 export default function App() {
-  const [updated, setUpdated] = useState(false);
+  const [updatedKey, setUpdatedKey] = useState(0);
 
-  const handleUpdate = () => setUpdated(!updated);
+  const handleUpdate = () => setUpdatedKey(prev => prev + 1);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 p-4">
@@ -15,7 +15,7 @@ export default function App() {
       </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-        <Dashboard key={updated} /> {/* força atualização */}
+        <Dashboard updatedKey={updatedKey} />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
