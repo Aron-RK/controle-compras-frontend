@@ -1,0 +1,9 @@
+{
+  "constrói": [
+    {
+      "fonte": "pacote.json",
+      "usar": "@vercel/construção estática",
+      "configurador": { "distDir": "dist" }
+    }
+  ]
+}
