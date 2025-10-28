@@ -21,14 +21,14 @@ export default function PurchaseForm({ onAdded }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-3 bg-white p-6 rounded-xl shadow-lg"
+      className="flex flex-col gap-3 bg-yellow-100 p-6 rounded-xl shadow-lg"
     >
-      <h2 className="text-xl font-semibold mb-2 text-gray-700">Adicionar Compra</h2>
+      <h2 className="text-xl font-semibold mb-2 text-red-700">Adicionar Compra</h2>
       <input
         value={buyer}
         onChange={(e) => setBuyer(e.target.value)}
         placeholder="Comprador"
-        className="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
+        className="border border-red-400 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 w-full"
         required
       />
       <input
@@ -37,19 +37,19 @@ export default function PurchaseForm({ onAdded }) {
         placeholder="Valor"
         type="number"
         step="0.01"
-        className="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
+        className="border border-red-400 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 w-full"
         required
       />
       <input
         value={date}
         onChange={(e) => setDate(e.target.value)}
         type="date"
-        className="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
+        className="border border-red-400 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 w-full"
         required
       />
       <button
         type="submit"
-        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-md transition-all duration-200"
+        className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 rounded-md transition-all duration-200"
       >
         Adicionar
       </button>
