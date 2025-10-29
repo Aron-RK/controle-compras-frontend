@@ -15,9 +15,6 @@ export default function App() {
           <h1 className="text-3xl sm:text-4xl font-extrabold text-red-700 text-center">
             Controle de Compras
           </h1>
-          <p className="text-center text-sm text-gray-600 mt-1">
-            Painel responsivo • Amarelo & Vermelho
-          </p>
         </header>
 
         {/* Dashboard */}
